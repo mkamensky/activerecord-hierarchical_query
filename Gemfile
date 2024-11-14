@@ -3,10 +3,11 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in activerecord-hierarchical_query.gemspec
 gemspec
 
-gem 'pg', '>= 0.21', '< 1.2'
-gem 'activerecord', '>= 5.0', '< 5.3'
+gem 'pg', '>= 0.21', '< 1.6'
+gem 'activerecord', '>= 5.0', '< 8'
 
 group :local do
+  gem 'rspec'
   gem 'yard'
   gem 'redcarpet'
   gem 'github-markup'
@@ -14,7 +15,9 @@ group :local do
 end
 
 group :development do
+  gem 'rspec'
   gem 'pry'
+  gem 'vv'
 end
 
 group :travis do
